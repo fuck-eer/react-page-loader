@@ -1,0 +1,256 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.pageLoader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+/* spinner */
+.spinnerContainer {
+	backdrop-filter: blur(3px);
+	background-color: rgba(0, 0, 0, 0.834);
+}
+.spinnerBox {
+	width: 100%;
+	height: 100%;
+	gap: 10px;
+	font-family: monospace;
+	font-weight: 800;
+	font-size: 14px;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+.spinner {
+	min-width: 12px;
+	min-height: 12px;
+	border-radius: 50%;
+	border: 4px solid #99f443;
+	border-top: 4px solid #ec449b;
+	border-bottom: 4px solid #ec449b;
+	animation: round 3s linear infinite;
+}
+.spinnerText {
+	text-align: center;
+	color: white;
+	font-family: inherit;
+}
+@keyframes round {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+/* pagepulse */
+.pulseContainer {
+	backdrop-filter: blur(1px);
+}
+.pulseContainer::before {
+	backdrop-filter: blur(1.2px);
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background: rgb(0, 0, 0);
+	background: linear-gradient(
+		90deg,
+		rgba(0, 0, 0, 0.01) 0%,
+		rgba(0, 0, 0, 0.1) 80%,
+		rgba(0, 0, 0, 0) 100%
+	);
+	animation: pulse 5s ease-in-out infinite alternate;
+}
+@keyframes pulse {
+	0% {
+		right: 100%;
+	}
+	100% {
+		right: 0;
+	}
+}
+/* pluckCards */
+.cardsContainer {
+	background-color: white;
+	display: flex;
+	box-sizing: border-box;
+	gap: 50px;
+	padding: 20px;
+	flex-flow: column nowrap;
+	justify-content: start;
+	align-items: stretch;
+}
+.heroSection {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	/* width: 100%;	 */
+	gap: 30px;
+	height: 50%;
+}
+.hero {
+	border-radius: 10px;
+	background-color: #ddd;
+	height: 100%;
+	position: relative;
+}
+.hero::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	border-radius: 10px;
+	left: 0;
+	height: 100%;
+	background: rgb(0, 0, 0);
+	background: linear-gradient(
+		90deg,
+		rgba(0, 0, 0, 0.01) 0%,
+		rgba(0, 0, 0, 0.1) 80%,
+		rgba(0, 0, 0, 0) 100%
+	);
+	animation: pulse 5s ease-in-out infinite;
+}
+.c1 {
+	width: 70%;
+}
+.c2 {
+	width: 30%;
+}
+.headerSection {
+	width: 60%;
+	gap: 15px;
+	height: 10%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: start;
+	align-self: center;
+	align-items: center;
+}
+.header {
+	border-radius: 5px;
+	width: 100%;
+	background-color: #ddd;
+	height: 30px;
+	position: relative;
+}
+.header::before {
+	backdrop-filter: blur(1.2px);
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background: rgb(0, 0, 0);
+	background: linear-gradient(
+		90deg,
+		rgba(0, 0, 0, 0.01) 0%,
+		rgba(0, 0, 0, 0.1) 80%,
+		rgba(0, 0, 0, 0) 100%
+	);
+	animation: pulse 5s ease-in-out infinite;
+}
+.subHeader {
+	border-radius: 5px;
+	width: 70%;
+	background-color: #ddd;
+	height: 30px;
+	position: relative;
+}
+.subHeader::before {
+	backdrop-filter: blur(1.2px);
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background: rgb(0, 0, 0);
+	background: linear-gradient(
+		90deg,
+		rgba(0, 0, 0, 0.01) 0%,
+		rgba(0, 0, 0, 0.1) 80%,
+		rgba(0, 0, 0, 0) 100%
+	);
+	animation: pulse 5s ease-in-out infinite;
+}
+.cardsSection {
+	display: flex;
+	justify-content: start;
+	gap: 30px;
+	align-items: stretch;
+	width: 100%;
+	height: 40%;
+}
+.card {
+	border-radius: 10px;
+	width: 33%;
+	display: flex;
+	gap: 15px;
+	padding: 15px;
+	background-color: #eee;
+	flex-grow: 1;
+}
+.icon {
+	width: 45%;
+	height: 100%;
+	background-color: #ddd;
+	border-radius: 10px;
+	position: relative;
+}
+.icon::before {
+	backdrop-filter: blur(1.2px);
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background: rgb(0, 0, 0);
+	background: linear-gradient(
+		90deg,
+		rgba(0, 0, 0, 0.01) 0%,
+		rgba(0, 0, 0, 0.1) 80%,
+		rgba(0, 0, 0, 0) 100%
+	);
+	animation: pulse 5s ease-in-out infinite;
+}
+.details {
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	flex-flow: column;
+	height: 80%;
+	width: 55%;
+	align-self: center;
+	gap: 15px;
+}
+.detail {
+	width: 100%;
+	background-color: #ddd;
+	border-radius: 5px;
+	width: 100%;
+	flex-grow: 1;
+	position: relative;
+}
+.detail::before {
+	backdrop-filter: blur(1.2px);
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background: rgb(0, 0, 0);
+	background: linear-gradient(
+		90deg,
+		rgba(0, 0, 0, 0.01) 0%,
+		rgba(0, 0, 0, 0.1) 80%,
+		rgba(0, 0, 0, 0) 100%
+	);
+	animation: pulse 5s ease-in-out infinite;
+}
