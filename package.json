@@ -33,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fuck-eer/react-page-loader-fullpage.git"
+    "url": "git+https://github.com/fuck-eer/react-page-loader.git"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.0.0",
